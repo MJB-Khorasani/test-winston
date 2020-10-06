@@ -1,0 +1,26 @@
+{
+  "name": "test-winston",
+  "version": "1.0.0",
+  "description": "Simple test for winston with express ## Installation npm install npm start ## Usage I create it to show how you can work with winston ## Contributing 1. Fork it! 2. Create your feature branch: `git checkout -b my-new-feature` 3. Commit your changes: `git commit -am 'Add some feature'` 4. Push to the branch: `git push origin my-new-feature` 5. Submit a pull request :D ## History this is first version: 2020-10-06 ## Credits this is my ETH public key: ____ # License MIT",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "winston": "^3.3.3",
+    "winston-mongodb": "^5.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MJB-Khorasani/test-winston.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MJB-Khorasani/test-winston/issues"
+  },
+  "homepage": "https://github.com/MJB-Khorasani/test-winston#readme"
+}
