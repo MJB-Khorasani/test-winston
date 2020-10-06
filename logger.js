@@ -21,7 +21,9 @@ class Logger {
                         useNewUrlParser: true
                     },
                     collection: 'winstonLogs',
-                    metaKey: 'meta'
+                    metaKey: 'meta',
+                    storeHost: true,
+                    label: name 
                 })
             ],
             meta: true
