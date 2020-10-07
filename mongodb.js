@@ -4,7 +4,7 @@ const MongoClient = mongodb.MongoClient;
 
 var _db;
 
-async function connect(logger) {
+module.exports.connect = async logger => {
     let client = await MongoClient.connect('mongodb://127.0.0.1:27017/test-winston?retryWrite=true', {
         useNewUrlParser: true,
         useUnifiedTopology: true
@@ -19,11 +19,6 @@ async function connect(logger) {
     return _db;
 };
 
-function getDb() {
+module.exports.getDb = () => {
     return _db ? _db : null;
-};
-
-module.exports = {
-    connect, 
-    getDb
 };
