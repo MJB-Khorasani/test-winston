@@ -1,12 +1,18 @@
 const Logger = require('./logger');
 const logger = new Logger('user-controller');
+const userService = require('./userService');
 
-module.exports.getIndex = (req, res, next) => {
-    logger.warn('warning log', {
+module.exports.listUser = async (req, res, next) => {
+    let users = await userService.listUsers();
+    res.json({ users });
+};
+
+module.exports.creaetUser = async (req, res, next) => {
+    let user = await userService.addUser();
+    logger.log('user created', {
         meta: {
-            'meta': 1
+            user
         }
     });
-
-    res.json({ status: 'not ok' });
+    res.json({ user });
 };

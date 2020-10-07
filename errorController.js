@@ -19,6 +19,8 @@ module.exports.notFound = (req, res, next) => {
 };
 
 module.exports.internalError = (error, req, res, next) => {
+    // all errors comes here
+    // you can send email or whatssapp message
     logger.error('Internal server error', {
         meta: {
             "method": req.method ? req.method : null,

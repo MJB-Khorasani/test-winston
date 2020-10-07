@@ -1,6 +1,8 @@
 const Logger = require('./logger');
 const logger = new Logger('app-initialized');
 
+require('./unhandledErrors.js').configure(logger);
+require('./mongodb').connect(logger);
 const express = require('express');
 const app = express();
 
